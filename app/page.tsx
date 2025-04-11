@@ -76,9 +76,11 @@ function Home() {
             </p>
           </div>
         </section>
+        {/* 
         <section className="mb-24 flex justify-center">
           <QRCode/>
         </section>
+        */}
       </div>
     </div>
   );
