@@ -28,7 +28,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/banner.png"
+            src="/placeholder.svg"
             alt="Background"
             fill
             priority
@@ -57,7 +57,7 @@ export function Hero() {
         }}
       >
         <Image
-          src="/banner.png"
+          src="/placeholder.svg"
           alt="Background"
           fill
           priority
@@ -76,7 +76,7 @@ export function Hero() {
           {/* Logo */}
           <div className="mb-6">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-PjQ7yXSb2U4BqTmLgAhrHSc15WVDmA.png"
+              src="/logo.svg"
               alt="DKK Logo"
               width={100}
               height={100}
