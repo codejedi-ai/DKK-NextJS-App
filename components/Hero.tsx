@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export function Hero() {
-  const [scrollY, setScrollY] = useState(0)
-  const [mounted, setMounted] = useState(false)
+  const [scrollY, setScrollY] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
+      setScrollY(window.scrollY);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const parallaxValue = scrollY * 0.4
+  const parallaxValue = scrollY * 0.4;
 
   if (!mounted) {
     return (
@@ -41,7 +41,7 @@ export function Hero() {
           />
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -73,33 +73,26 @@ export function Hero() {
       {/* Hero content */}
       <div className="relative z-20 h-full container mx-auto px-4 flex flex-col justify-center items-center">
         <div className="flex flex-col items-center text-center animate-fade-in-up">
-          {/* Logo */}
-          <div className="mb-6">
+          <h1 className="flex items-center text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
+            {/* Logo */}
             <Image
-              src="/logo.svg"
+              src="/dkk-logo-removebg-preview.png"
               alt="DKK Logo"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
               className="animate-pulse"
             />
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-            <span className="text-primary">DUO KEYBOARD</span>
-            <br />
-            <span className="text-white">KOALITION</span>
+            {/* Spacing between elements */}
+            <span className="text-primary ml-4">DUO KEYBOARD</span>
+            <span className="text-white ml-4">KOALITION</span>
           </h1>
-
-          {/* Tagline */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-8">
-            A community of elite hackers pushing the boundaries of innovation
-          </p>
-
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/projects">
-              <Button size="lg" className="px-8 py-6 text-lg hover:scale-105 transition-transform duration-200">
+              <Button
+                size="lg"
+                className="px-8 py-6 text-lg hover:scale-105 transition-transform duration-200"
+              >
                 Explore Projects
               </Button>
             </Link>
@@ -121,5 +114,5 @@ export function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }
