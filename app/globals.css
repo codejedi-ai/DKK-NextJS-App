@@ -13,8 +13,8 @@
     --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 39 100% 50%; /* Orange #FFA500 */
-    --primary-foreground: 0 0% 100%;
+    --primary: 39 100% 50%; /* Orange #FFA500 - representing warmth and family connection */
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 29%; /* Dark Gray #4A4A4A */
     --secondary-foreground: 0 0% 100%;
@@ -23,7 +23,7 @@
     --muted-foreground: 0 0% 70%;
 
     --accent: 39 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -54,7 +54,7 @@
     @apply text-primary hover:text-white transition-colors duration-200;
   }
 
-  .icon-trophy {
+  .icon-heart {
     @apply text-primary hover:scale-110 transition-all duration-200;
   }
 
@@ -101,4 +101,17 @@
 
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
+}
+
+/* Cultural sensitivity styles */
+.cultural-text {
+  @apply leading-relaxed tracking-wide;
+}
+
+.story-card {
+  @apply bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 hover:border-primary/30 transition-all duration-300;
+}
+
+.family-connection {
+  @apply text-primary/80 hover:text-primary transition-colors duration-200;
 }
