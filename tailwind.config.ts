@@ -1,17 +1,15 @@
-import tailwindcssAnimate from "tailwindcss-animate"
+import type { Config } from "tailwindcss"
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./utils/**/*.{ts,tsx}",
-    "./types/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -28,76 +26,13 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#D4A574", // Warm Gold - represents heritage and wisdom
-          foreground: "#1A1A1A",
-          50: "#FDF8F3",
-          100: "#F9EFE0",
-          200: "#F1DCC0",
-          300: "#E8C89A",
-          400: "#DEB477",
-          500: "#D4A574", // Main
-          600: "#C8955F",
-          700: "#B8834A",
-          800: "#A67139",
-          900: "#8B5E2E",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#6B73FF", // Soft Periwinkle - represents connection across cultures
-          foreground: "#FFFFFF",
-          50: "#F0F1FF",
-          100: "#E6E8FF",
-          200: "#D1D5FF",
-          300: "#B8BEFF",
-          400: "#9CA3FF",
-          500: "#6B73FF", // Main
-          600: "#5A62E6",
-          700: "#4A52CC",
-          800: "#3D44B3",
-          900: "#323999",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-        accent: {
-          DEFAULT: "#FF8A65", // Coral - represents warmth and family bonds
-          foreground: "#1A1A1A",
-          50: "#FFF3F0",
-          100: "#FFE6E0",
-          200: "#FFCCC0",
-          300: "#FFB3A0",
-          400: "#FF9980",
-          500: "#FF8A65", // Main
-          600: "#FF7043",
-          700: "#FF5722",
-          800: "#E64A19",
-          900: "#BF360C",
-        },
-        sage: {
-          DEFAULT: "#87A96B", // Sage Green - represents growth and nature
-          50: "#F4F7F0",
-          100: "#E8F0E0",
-          200: "#D1E0C0",
-          300: "#B9D0A0",
-          400: "#A0C080",
-          500: "#87A96B", // Main
-          600: "#739157",
-          700: "#5F7A47",
-          800: "#4C6238",
-          900: "#3A4B2C",
-        },
-        earth: {
-          DEFAULT: "#8B4513", // Saddle Brown - represents tradition and roots
-          50: "#F7F3F0",
-          100: "#EDE6E0",
-          200: "#DBCCC0",
-          300: "#C8B3A0",
-          400: "#B69980",
-          500: "#A3805F", // Lighter version
-          600: "#8B4513", // Main
-          700: "#73390F",
-          800: "#5C2E0C",
-          900: "#452309",
-        },
-        // Keep existing colors for compatibility
-        black: "#0F0F0F", // Rich black instead of pure black
-        white: "#F8F9FA", // Soft white instead of pure white
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -105,6 +40,10 @@ module.exports = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -114,16 +53,18 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        ivory: {
-          100: "#FFFFF0",
-          200: "#FEFCEB",
-        },
-        rose: {
-          50: "#FFF1F2",
-          100: "#FFE4E6",
-          500: "#F43F5E",
-          600: "#E11D48",
-          700: "#BE123C",
+        emerald: {
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
+          800: "#065f46",
+          900: "#064e3b",
+          950: "#022c22",
         },
       },
       borderRadius: {
@@ -133,12 +74,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -147,5 +88,7 @@ module.exports = {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
-}
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
