@@ -44,13 +44,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setLoading(true)
         setError(null)
 
-        // Check if supabase is available (not a mock)
-        if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-          console.warn("Supabase not configured, skipping auth initialization")
-          setLoading(false)
-          return
-        }
-
         const {
           data: { session },
         } = await supabase.auth.getSession()
@@ -72,27 +65,24 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     initializeAuth()
 
-    // Only set up listener if supabase is properly configured
-    if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      // Set up auth state change listener
-      const {
-        data: { subscription },
-      } = supabase.auth.onAuthStateChange((event, session) => {
-        console.log("Auth state changed:", event)
+    // Set up auth state change listener
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log("Auth state changed:", event)
 
-        if (session?.user) {
-          setUser(session.user as UserDetails)
-        } else {
-          setUser(null)
-        }
-
-        setLoading(false)
-      })
-
-      // Cleanup subscription
-      return () => {
-        subscription?.unsubscribe()
+      if (session?.user) {
+        setUser(session.user as UserDetails)
+      } else {
+        setUser(null)
       }
+
+      setLoading(false)
+    })
+
+    // Cleanup subscription
+    return () => {
+      subscription?.unsubscribe()
     }
   }, [])
 

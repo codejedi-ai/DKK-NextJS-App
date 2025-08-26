@@ -2,32 +2,10 @@ import { createServerClient } from "@supabase/ssr"
 import { cookies } from "next/headers"
 
 export const createClient = async () => {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-  if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn("Supabase environment variables are not set")
-    // Return a mock client for build time
-    return {
-      auth: {
-        getSession: () => Promise.resolve({ data: { session: null }, error: null }),
-        getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-        onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
-        signOut: () => Promise.resolve({ error: null }),
-        exchangeCodeForSession: () => Promise.resolve({ error: null }),
-      },
-      from: () => ({
-        select: () => Promise.resolve({ data: [], error: null }),
-        insert: () => Promise.resolve({ data: null, error: null }),
-        update: () => Promise.resolve({ data: null, error: null }),
-        delete: () => Promise.resolve({ data: null, error: null }),
-        single: () => Promise.resolve({ data: null, error: null }),
-        eq: function () {
-          return this
-        },
-      }),
-    } as any
-  }
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://xnjqckplnufgsrwngofj.supabase.co"
+  const supabaseAnonKey =
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhuanFja3BsbnVmZ3Nyd25nb2ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ0ODkyOTMsImV4cCI6MjA1MDA2NTI5M30.wYaYsi6yb-Dr_r3Uakvt2PSOltZVQnBGc8V40zlFMcU"
 
   const cookieStore = await cookies()
 
