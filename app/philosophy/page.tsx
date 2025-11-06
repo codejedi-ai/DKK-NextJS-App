@@ -162,17 +162,17 @@ function ForceQuotes() {
     <div className="my-10 space-y-6">
       <blockquote className="p-6 rounded-lg bg-gradient-to-r from-indigo-900/60 to-blue-900/60 border-l-4 border-yellow-500">
         <p className="text-gray-200 italic">
-          "The Force is what gives a Jedi his power. It's an energy field
+          &quot;The Force is what gives a Jedi his power. It&apos;s an energy field
           created by all living things. It surrounds us and penetrates us; it
-          binds the galaxy together."
+          binds the galaxy together.&quot;
         </p>
         <footer className="mt-2 text-yellow-400">— Obi-Wan Kenobi</footer>
       </blockquote>
 
       <blockquote className="p-6 rounded-lg bg-gradient-to-r from-purple-900/60 to-indigo-900/60 border-l-4 border-yellow-500">
         <p className="text-gray-200 italic">
-          "Close your eyes. Feel it. The light... it's always been there. It
-          will guide you."
+          &quot;Close your eyes. Feel it. The light... it&apos;s always been there. It
+          will guide you.&quot;
         </p>
         <footer className="mt-2 text-yellow-400">— Maz Kanata</footer>
       </blockquote>

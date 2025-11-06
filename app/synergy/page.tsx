@@ -9,7 +9,7 @@ export default function Synergy() {
         <div className="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700">
           <h2 className="text-xl font-semibold mb-4 text-primary">Influencer Vibe</h2>
           <p className="text-gray-300">
-            Influencers emanate a personal ethos, a set of feelings, and an atmosphere that resonates with their audience. This unique "vibe" is the energy they bring to every piece of content they create.
+            Influencers emanate a personal ethos, a set of feelings, and an atmosphere that resonates with their audience. This unique &quot;vibe&quot; is the energy they bring to every piece of content they create.
           </p>
           <div className="mt-6 h-40 bg-gradient-to-br from-red-500 to-pink-300 rounded-lg flex items-center justify-center">
             <span className="text-white text-2xl font-bold">Energy</span>
@@ -19,7 +19,7 @@ export default function Synergy() {
         <div className="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700">
           <h2 className="text-xl font-semibold mb-4 text-indigo-600">Brand Identity</h2>
           <p className="text-gray-300">
-            Brands are embodiments of purpose and values that shape perceptions and inspire loyalty. Their "identity" is the foundation of how they're perceived in the marketplace.
+            Brands are embodiments of purpose and values that shape perceptions and inspire loyalty. Their &quot;identity&quot; is the foundation of how they&apos;re perceived in the marketplace.
           </p>
           <div className="mt-6 h-40 bg-gradient-to-br from-blue-500 to-indigo-300 rounded-lg flex items-center justify-center">
             <span className="text-white text-2xl font-bold">Purpose</span>
@@ -30,7 +30,7 @@ export default function Synergy() {
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-12 border border-gray-700">
         <h2 className="text-2xl font-bold mb-6 text-center text-primary">When Vibe Meets Identity</h2>
         <p className="text-lg text-gray-300 mb-6">
-          The relationship between an influencer's vibe and a brand's identity is like the interplay of light and photons. Just as light brings life and clarity to the world through its photons, influencers illuminate and bring purpose to brand identities.
+          The relationship between an influencer&apos;s vibe and a brand&apos;s identity is like the interplay of light and photons. Just as light brings life and clarity to the world through its photons, influencers illuminate and bring purpose to brand identities.
         </p>
         <div className="h-60 bg-gradient-to-r from-green-500 via-red-500 to-blue-500 rounded-lg flex items-center justify-center">
           <span className="text-white text-3xl font-bold">Transformation</span>

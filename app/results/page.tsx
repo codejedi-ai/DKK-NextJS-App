@@ -90,7 +90,7 @@ export default function Results(): JSX.Element {
             Your Influencer Matches
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Based on your brand's identity, we've found these influencers that align with your values and vision
+            Based on your brand&apos;s identity, we&apos;ve found these influencers that align with your values and vision
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export default function Results(): JSX.Element {
                 Influencers with Matching Vibes
               </h2>
               <p className="text-gray-400">
-                Found {matches.length} {matches.length === 1 ? 'influencer' : 'influencers'} that {matches.length === 1 ? 'matches' : 'match'} your brand's identity
+                Found {matches.length} {matches.length === 1 ? 'influencer' : 'influencers'} that {matches.length === 1 ? 'matches' : 'match'} your brand&apos;s identity
               </p>
             </div>
             <div className="space-y-6">
@@ -228,7 +228,7 @@ export default function Results(): JSX.Element {
                 <div className="text-purple-400 text-5xl mb-4">🎉</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Thank You for Your Curiosity!</h3>
                 <p className="text-gray-300 mb-6">
-                  We're still developing our AI-powered report generation feature. 
+                  We&apos;re still developing our AI-powered report generation feature. 
                   Stay tuned for this exciting capability in the near future!
                 </p>
                 <div className="bg-gray-700 p-4 rounded-lg mb-6 text-left">

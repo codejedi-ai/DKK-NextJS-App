@@ -22,6 +22,25 @@ interface FormData {
   targetEmotion: string;
 }
 
+function generateMockInfluencer(index: number, randomValue: number, formData: FormData): InfluencerMatch {
+  const names = ['VibrantVictoria', 'CreativeChris', 'ArtisticAlex', 'BoldBrandon', 'DynamicDiana'];
+  const platforms = ['Instagram', 'TikTok', 'YouTube', 'Twitter'];
+  const niches = ['Art & Lifestyle', 'Tech & Innovation', 'Gaming', 'Music', 'Fashion'];
+  
+  return {
+    name: names[index % names.length],
+    platform: platforms[index % platforms.length],
+    followers: `${Math.floor(randomValue * 10)}k`,
+    engagement: randomValue > 5 ? 'High' : 'Medium',
+    niche: niches[index % niches.length],
+    details: `A creative influencer who aligns with ${formData.brand}'s values of ${formData.brandValues.join(', ')}.`,
+    values: formData.brandValues.slice(0, 2),
+    vibeScore: 60 + randomValue * 3,
+    audienceAlignment: 65 + randomValue * 2,
+    contentStyle: 'Modern and engaging'
+  };
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Parse the request body
