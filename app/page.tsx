@@ -19,16 +19,14 @@ export default function HomePage() {
 
   useEffect(() => {
     if (!loading && user) {
-      router.push("/dashboard")
+      // Immediately redirect to dashboard if user is already logged in
+      router.replace("/dashboard")
     }
   }, [user, loading, router])
 
-  if (loading) {
+  // Show loading while checking auth or redirecting
+  if (loading || user) {
     return <Loading />
-  }
-
-  if (user) {
-    return null // Will redirect via useEffect
   }
 
   return (
@@ -145,7 +143,7 @@ export default function HomePage() {
                 },
               }}
               providers={["discord"]}
-              redirectTo={typeof window !== "undefined" ? `${window.location.origin}/auth/callback?next=/dashboard` : ""}
+              redirectTo="http://localhost:3000/auth/callback?next=/dashboard"
               onlyThirdPartyProviders={false}
               magicLink={false}
               showLinks={false}

@@ -81,6 +81,15 @@ export default function DashboardPage() {
             </ul>
           </div>
         </div>
+
+        <div className="mt-6 bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-4 text-cyan-300">User Data (JSON)</h2>
+          <div className="bg-[#0a0a1a] rounded-lg p-4 border border-cyan-500/20 overflow-auto">
+            <pre className="text-sm text-gray-300 whitespace-pre-wrap break-words">
+              {JSON.stringify(user, null, 2)}
+            </pre>
+          </div>
+        </div>
       </div>
     </div>
   )
