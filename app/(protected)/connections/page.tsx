@@ -1,109 +1,66 @@
-import PhilosophySlideshow from "@/components/PhilosophySlideshow"
-
-function ForceBalance() {
+export default function Connections() {
   return (
-    <div className="my-12 py-8 px-6 rounded-lg bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-700">
-      <h3 className="text-2xl font-bold mb-6 text-center text-yellow-400">
-        The Flow of the Force
-      </h3>
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="flex-1 p-6 rounded-lg bg-gradient-to-br from-purple-700 via-pink-500 to-indigo-800 shadow-inner">
-          <h4 className="text-xl font-semibold text-purple-200 text-center mb-3">
-            Aura of Balance
-          </h4>
-          <p className="text-purple-100">
-            The aura represents harmony, resonance, and universal flow. It&apos;s the
-            subtle energy that connects all things and maintains equilibrium
-            within the Force.
+    <div className="max-w-6xl mx-auto pt-20 text-white px-4 min-h-screen">
+      <h1 className="text-4xl font-bold mb-3 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+        Builder Connections
+      </h1>
+      <p className="text-xl text-center mb-12 text-gray-300">
+        Connect with fellow keyboard builders and creators
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-500/50 transition-colors">
+          <div className="text-4xl mb-4">🤝</div>
+          <h2 className="text-xl font-semibold mb-3 text-cyan-300">Find Collaborators</h2>
+          <p className="text-gray-300">
+            Discover builders working on similar projects or complementary skills. Team up and create something amazing together.
           </p>
         </div>
-        <div className="flex-1 p-6 rounded-lg bg-gradient-to-br from-red-800 via-orange-600 to-yellow-500 shadow-inner">
-          <h4 className="text-xl font-semibold text-orange-200 text-center mb-3">
-            Vibe of Energy
-          </h4>
-          <p className="text-orange-100">
-            The vibe flows with intensity, passion, and momentum. It&apos;s the
-            energetic pulse that drives transformation and amplifies individual
-            impact within the Force.
+
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 hover:border-purple-500/50 transition-colors">
+          <div className="text-4xl mb-4">💬</div>
+          <h2 className="text-xl font-semibold mb-3 text-purple-300">Community Chat</h2>
+          <p className="text-gray-300">
+            Join discussions, share ideas, and get feedback from experienced builders in the community.
+          </p>
+        </div>
+
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-pink-500/30 rounded-lg p-6 hover:border-pink-500/50 transition-colors">
+          <div className="text-4xl mb-4">🎯</div>
+          <h2 className="text-xl font-semibold mb-3 text-pink-300">Mentorship</h2>
+          <p className="text-gray-300">
+            Connect with mentors who can guide you through your building journey, or offer your expertise to newcomers.
           </p>
         </div>
       </div>
-    </div>
-  )
-}
 
-function ForceQuotes() {
-  return (
-    <div className="my-10 space-y-6">
-      <blockquote className="p-6 rounded-lg bg-gradient-to-r from-indigo-900/60 to-blue-900/60 border-l-4 border-yellow-500">
-        <p className="text-gray-200 italic">
-          &quot;The Force is what gives a Jedi his power. It&apos;s an energy field
-          created by all living things. It surrounds us and penetrates us; it
-          binds the galaxy together.&quot;
-        </p>
-        <footer className="mt-2 text-yellow-400">— Obi-Wan Kenobi</footer>
-      </blockquote>
-      <blockquote className="p-6 rounded-lg bg-gradient-to-r from-purple-900/60 to-indigo-900/60 border-l-4 border-yellow-500">
-        <p className="text-gray-200 italic">
-          &quot;Close your eyes. Feel it. The light... it&apos;s always been there. It
-          will guide you.&quot;
-        </p>
-        <footer className="mt-2 text-yellow-400">— Maz Kanata</footer>
-      </blockquote>
-    </div>
-  )
-}
-
-export default function Philosophy() {
-  return (
-    <div className="max-w-4xl mx-auto pt-20 text-white px-4 min-h-screen bg-fixed">
-      <div className="space-y-stars absolute top-0 left-0 right-0 bottom-0 -z-10"></div>
-      <h1 className="text-4xl font-bold mb-3 text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500">
-        The Philosophy of Auraflow
-      </h1>
-      <h2 className="text-xl text-center mb-8 text-yellow-300">
-        The Force That Binds Us All
-      </h2>
-      <div className="prose lg:prose-xl mx-auto">
-        <p className="text-lg leading-relaxed mb-6 text-gray-300">
-          Like the mystical Force that flows through the Star Wars galaxy,
-          Auraflow embodies the harmonious interplay between two fundamental
-          energies: <span className="text-blue-400">aura</span>, the personal
-          energy that radiates from individuals, and{" "}
-          <span className="text-purple-400">vibe</span>, the universal resonance
-          that connects all living things.
-        </p>
-        <p className="text-lg leading-relaxed mb-6 text-gray-300">
-          Just as Jedi and other Force-sensitives can feel disturbances in the
-          Force, practitioners of Auraflow learn to sense and harmonize with the
-          energy that surrounds us all. This universal connection transcends
-          cultures, galaxies, and time itself.
-        </p>
-        <ForceBalance />
-        <h3 className="text-2xl font-bold mt-12 mb-6 text-center text-yellow-400">
-          Universal Interpretations
-        </h3>
-        <PhilosophySlideshow />
-        <p className="text-lg leading-relaxed mt-10 text-gray-300">
-          Across cultures and galaxies, this universal energy field has been
-          conceptualized in various ways. Just as the Force manifests
-          differently to Jedi, Sith, and other cultures in the Star Wars
-          universe, Auraflow bridges these traditions by emphasizing personal
-          energy (aura) and collective resonance (vibe), reminding us of our
-          shared connection to existence.
-        </p>
-        <ForceQuotes />
-        <div className="mt-16 p-6 rounded-lg bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800">
-          <h3 className="text-2xl font-bold mb-4 text-center text-yellow-400">
-            The Core Philosophy
-          </h3>
-          <p className="text-lg leading-relaxed text-gray-300">
-            Whether you call it The Force, Aura, Vibe, Qi, Prana, or any other
-            name, this energy diffuses through all existence, binding and
-            connecting everything in a cosmic dance. By learning to sense and
-            work with this energy, we can achieve greater harmony within
-            ourselves and with the universe around us.
-          </p>
+      <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-8">
+        <h2 className="text-2xl font-bold mb-6 text-cyan-300">Active Builders</h2>
+        <div className="space-y-4">
+          <div className="flex items-center gap-4 p-4 bg-[#0a0a1a] rounded-lg border border-cyan-500/20">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-xl">
+              KB
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-white">Keyboard Builder</h3>
+              <p className="text-sm text-gray-400">Working on: Custom 65% layout</p>
+            </div>
+            <button className="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors">
+              Connect
+            </button>
+          </div>
+          <div className="flex items-center gap-4 p-4 bg-[#0a0a1a] rounded-lg border border-cyan-500/20">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-xl">
+              CB
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-white">Case Designer</h3>
+              <p className="text-sm text-gray-400">Working on: 3D printed cases</p>
+            </div>
+            <button className="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors">
+              Connect
+            </button>
+          </div>
         </div>
       </div>
     </div>

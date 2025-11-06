@@ -1,47 +1,115 @@
-export default function Synergy() {
+export default function Hackathons() {
   return (
-    <div className="max-w-4xl mx-auto pt-20 text-white">
-      <h1 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
-        Vibe & Identity: The Perfect Synergy
+    <div className="max-w-6xl mx-auto pt-20 text-white px-4 min-h-screen">
+      <h1 className="text-4xl font-bold mb-3 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+        Hackathons & Events
       </h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700">
-          <h2 className="text-xl font-semibold mb-4 text-primary">Influencer Vibe</h2>
-          <p className="text-gray-300">
-            Influencers emanate a personal ethos, a set of feelings, and an atmosphere that resonates with their audience. This unique &quot;vibe&quot; is the energy they bring to every piece of content they create.
-          </p>
-          <div className="mt-6 h-40 bg-gradient-to-br from-red-500 to-pink-300 rounded-lg flex items-center justify-center">
-            <span className="text-white text-2xl font-bold">Energy</span>
+      <p className="text-xl text-center mb-12 text-gray-300">
+        Join keyboard building competitions and community events
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-500/50 transition-colors">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="text-3xl">🏆</div>
+            <div>
+              <h2 className="text-xl font-semibold text-cyan-300">Duo Keyboard Build-Off</h2>
+              <p className="text-sm text-gray-400">Active • Ends in 5 days</p>
+            </div>
           </div>
+          <p className="text-gray-300 mb-4">
+            Build the most innovative dual-layout keyboard. Showcase your creativity and technical skills.
+          </p>
+          <div className="flex gap-2 mb-4">
+            <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Hardware</span>
+            <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Design</span>
+          </div>
+          <button className="w-full py-2 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors">
+            Join Hackathon
+          </button>
         </div>
-        
-        <div className="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700">
-          <h2 className="text-xl font-semibold mb-4 text-indigo-600">Brand Identity</h2>
-          <p className="text-gray-300">
-            Brands are embodiments of purpose and values that shape perceptions and inspire loyalty. Their &quot;identity&quot; is the foundation of how they&apos;re perceived in the marketplace.
-          </p>
-          <div className="mt-6 h-40 bg-gradient-to-br from-blue-500 to-indigo-300 rounded-lg flex items-center justify-center">
-            <span className="text-white text-2xl font-bold">Purpose</span>
+
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 hover:border-purple-500/50 transition-colors">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="text-3xl">⚡</div>
+            <div>
+              <h2 className="text-xl font-semibold text-purple-300">Rapid Prototype Challenge</h2>
+              <p className="text-sm text-gray-400">Upcoming • Starts in 2 weeks</p>
+            </div>
           </div>
+          <p className="text-gray-300 mb-4">
+            Design and build a functional keyboard prototype in 48 hours. Speed and innovation are key.
+          </p>
+          <div className="flex gap-2 mb-4">
+            <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Speed Build</span>
+            <span className="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Innovation</span>
+          </div>
+          <button className="w-full py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors">
+            Register Interest
+          </button>
+        </div>
+
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-pink-500/30 rounded-lg p-6 hover:border-pink-500/50 transition-colors">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="text-3xl">🎨</div>
+            <div>
+              <h2 className="text-xl font-semibold text-pink-300">Aesthetic Design Contest</h2>
+              <p className="text-sm text-gray-400">Ongoing • Monthly</p>
+            </div>
+          </div>
+          <p className="text-gray-300 mb-4">
+            Showcase your keyboard&apos;s visual design. Winners featured in community gallery.
+          </p>
+          <div className="flex gap-2 mb-4">
+            <span className="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Design</span>
+            <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Aesthetics</span>
+          </div>
+          <button className="w-full py-2 bg-pink-500/20 text-pink-300 rounded-lg hover:bg-pink-500/30 transition-colors">
+            Submit Entry
+          </button>
+        </div>
+
+        <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-500/50 transition-colors">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="text-3xl">🔧</div>
+            <div>
+              <h2 className="text-xl font-semibold text-cyan-300">Firmware Hackathon</h2>
+              <p className="text-sm text-gray-400">Upcoming • Starts in 1 month</p>
+            </div>
+          </div>
+          <p className="text-gray-300 mb-4">
+            Build innovative firmware features and QMK/VIA configurations. Push the boundaries of keyboard software.
+          </p>
+          <div className="flex gap-2 mb-4">
+            <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Firmware</span>
+            <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Software</span>
+          </div>
+          <button className="w-full py-2 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors">
+            Learn More
+          </button>
         </div>
       </div>
-      
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-12 border border-gray-700">
-        <h2 className="text-2xl font-bold mb-6 text-center text-primary">When Vibe Meets Identity</h2>
-        <p className="text-lg text-gray-300 mb-6">
-          The relationship between an influencer&apos;s vibe and a brand&apos;s identity is like the interplay of light and photons. Just as light brings life and clarity to the world through its photons, influencers illuminate and bring purpose to brand identities.
-        </p>
-        <div className="h-60 bg-gradient-to-r from-green-500 via-red-500 to-blue-500 rounded-lg flex items-center justify-center">
-          <span className="text-white text-3xl font-bold">Transformation</span>
+
+      <div className="bg-[#0a0a1a]/80 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-8">
+        <h2 className="text-2xl font-bold mb-6 text-cyan-300">Past Winners</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-[#0a0a1a] rounded-lg p-4 border border-cyan-500/20">
+            <div className="text-2xl mb-2">🥇</div>
+            <h3 className="font-semibold text-white mb-1">Modular 65%</h3>
+            <p className="text-sm text-gray-400">by @keyboard_master</p>
+          </div>
+          <div className="bg-[#0a0a1a] rounded-lg p-4 border border-cyan-500/20">
+            <div className="text-2xl mb-2">🥈</div>
+            <h3 className="font-semibold text-white mb-1">Ergo Split Pro</h3>
+            <p className="text-sm text-gray-400">by @ergo_builder</p>
+          </div>
+          <div className="bg-[#0a0a1a] rounded-lg p-4 border border-cyan-500/20">
+            <div className="text-2xl mb-2">🥉</div>
+            <h3 className="font-semibold text-white mb-1">Wireless TKL</h3>
+            <p className="text-sm text-gray-400">by @wireless_wizard</p>
+          </div>
         </div>
-      </div>
-      
-      <div className="prose lg:prose-xl mx-auto">
-        <p className="text-lg leading-relaxed text-gray-300">
-          When paired thoughtfully, these auras and identities merge to create something that is not only authentic but also transformative—a shared story that resonates deeply with audiences. Together, they form an inseparable bond, one amplifying the other.
-        </p>
       </div>
     </div>
-  );
+  )
 }
