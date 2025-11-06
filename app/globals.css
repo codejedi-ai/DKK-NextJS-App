@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Black */
-    --foreground: 0 0% 100%; /* White */
+    --background: 15 15 15; /* Rich Black #0F0F0F */
+    --foreground: 248 249 250; /* Soft White #F8F9FA */
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 26 26 26; /* Dark Gray #1A1A1A */
+    --card-foreground: 248 249 250;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 26 26 26;
+    --popover-foreground: 248 249 250;
 
-    --primary: 39 100% 50%; /* Orange #FFA500 */
-    --primary-foreground: 0 0% 100%;
+    --primary: 39 65% 65%; /* Warm Gold #D4A574 */
+    --primary-foreground: 26 26 26;
 
-    --secondary: 0 0% 29%; /* Dark Gray #4A4A4A */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 236 85% 70%; /* Soft Periwinkle #6B73FF */
+    --secondary-foreground: 248 249 250;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 39 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 14 100% 70%; /* Coral #FF8A65 */
+    --accent-foreground: 26 26 26;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 248 249 250;
 
-    --border: 39 100% 50%;
+    --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 39 100% 50%;
+    --ring: 39 65% 65%;
 
     --radius: 0.5rem;
   }
@@ -47,23 +47,79 @@
 
 @layer components {
   .nav-link {
-    @apply text-white hover:text-primary transition-colors duration-200;
+    @apply text-foreground/80 hover:text-primary transition-colors duration-200;
   }
 
   .icon {
-    @apply text-primary hover:text-white transition-colors duration-200;
+    @apply text-primary hover:text-accent transition-colors duration-200;
   }
 
-  .icon-trophy {
+  .icon-heart {
     @apply text-primary hover:scale-110 transition-all duration-200;
   }
 
   .icon-secondary {
-    @apply text-white hover:text-primary transition-colors duration-200;
+    @apply text-secondary hover:text-primary transition-colors duration-200;
   }
 
   .icon-muted {
     @apply text-muted-foreground hover:text-primary transition-colors duration-200;
+  }
+
+  /* Cultural color utilities */
+  .heritage-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary;
+  }
+
+  .cultural-card {
+    @apply bg-gradient-to-br from-card to-card/50 border border-primary/20 hover:border-primary/40 transition-all duration-300;
+  }
+
+  .story-highlight {
+    @apply bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border-l-4 border-primary;
+  }
+
+  .family-connection {
+    @apply text-accent hover:text-primary transition-colors duration-200;
+  }
+
+  /* Auth form specific styles */
+  .auth-container {
+    @apply space-y-4;
+  }
+
+  .auth-container input:focus {
+    @apply ring-2 ring-primary/50 border-primary/50;
+  }
+
+  .auth-container button:hover {
+    @apply bg-primary/90 transform scale-[1.02];
+  }
+
+  .auth-container .supabase-auth-ui_ui-button {
+    @apply transition-all duration-200;
+  }
+
+  .auth-container .supabase-auth-ui_ui-input {
+    @apply transition-all duration-200;
+  }
+
+  .auth-container .supabase-auth-ui_ui-anchor {
+    @apply hover:text-primary/80 transition-colors duration-200;
+  }
+
+  /* Header specific styles */
+  .header-backdrop {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dropdown-menu {
+    animation: dropdown-appear 0.15s ease-out;
+  }
+
+  .mobile-menu {
+    animation: mobile-menu-slide 0.2s ease-out;
   }
 }
 
@@ -95,10 +151,73 @@
   }
 }
 
+@keyframes dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mobile-menu-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out;
 }
 
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
+}
+
+/* Cultural sensitivity styles */
+.cultural-text {
+  @apply leading-relaxed tracking-wide;
+}
+
+.story-card {
+  @apply cultural-card shadow-lg hover:shadow-xl;
+}
+
+/* Glassmorphism effects */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/20 backdrop-blur-md border border-white/5;
+}
+
+/* Auth page background pattern */
+.auth-bg-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(212, 165, 116, 0.03) 1px, transparent 0);
+  background-size: 60px 60px;
+  opacity: 0.5;
+}
+
+/* Ensure proper spacing for fixed header */
+body {
+  padding-top: 0;
+}
+
+main {
+  padding-top: 0;
+}
+
+/* Cultural heritage inspired patterns */
+.heritage-pattern {
+  background-image: radial-gradient(circle at 25% 25%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 138, 101, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(107, 115, 255, 0.05) 0%, transparent 50%);
 }
