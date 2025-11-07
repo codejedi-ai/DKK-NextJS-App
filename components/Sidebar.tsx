@@ -1,15 +1,9 @@
-import { headers } from "next/headers"
+"use client"
+
 import { Home, Sparkles, FolderKanban, Users, Wrench, Code } from "lucide-react"
 import SidebarClient from "./SidebarClient"
 
-export default async function Sidebar({ children }: { children: React.ReactNode }) {
-  const headersList = await headers()
-  const pathname = headersList.get("x-pathname") || "/dashboard"
-
-  const isActive = (path: string) => {
-    return pathname === path
-  }
-
+export default function Sidebar({ children }: { children: React.ReactNode }) {
   const navItems = [
     { href: "/dashboard", label: "Dashboard", icon: Home },
     { href: "/connections", label: "Connections", icon: Users },
@@ -20,7 +14,7 @@ export default async function Sidebar({ children }: { children: React.ReactNode 
   ]
 
   return (
-    <SidebarClient navItems={navItems} isActive={isActive}>
+    <SidebarClient navItems={navItems} isActive={() => false}>
       {children}
     </SidebarClient>
   )
